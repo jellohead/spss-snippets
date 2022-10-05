@@ -14,3 +14,11 @@ pandas.crosstab(a, [b, c], rownames=['a'], colnames=['b', 'c'])
 
 
 crossVar = pandas.crosstab(foo, bar)
+
+*Importing all of the data.
+BEGIN PROGRAM Python.
+dataCursor = spss.Cursor()
+AllData = dataCursor.fetchall()
+dataCursor.close()
+print AllData
+END PROGRAM.
