@@ -53,3 +53,5 @@ pandas.crosstab(foo, bar)
 
 # form crosstab with dropna=False
 pandas.crosstab(foo, bar, dropna=False)
+
+crossVar = pandas.crosstab(foo, bar)
