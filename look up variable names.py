@@ -48,3 +48,12 @@ print(xVars)
 for xVar in xVars:
     print("GRAPH/SCATTER " + xVar + " WITH COSTS.")
 end program.
+
+# https://stackoverflow.com/questions/67945837/getting-column-header-from-snowflake-table-using-python-snowflake-connector
+# I had the same question, using the python snowflake connector in Jupyter notebooks. I work with dataframes, so working from @SimonD's answer above I adapted the section with cursor.description to:
+# hdrs = pd.DataFrame(cursor.description)
+# df = pd.DataFrame(sql_data)
+# From my data, the resulting hdrs dataframe has an attribute 'name' that I can use to set column names for the df dataframe, like so:
+# df.columns = hdrs['name']
+
+help(pandas)
