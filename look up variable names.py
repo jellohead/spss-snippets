@@ -1,3 +1,4 @@
+import pandas as pd
 import spss
 *Look up all variable names.
 begin program.
@@ -57,3 +58,26 @@ end program.
 # df.columns = hdrs['name']
 
 help(pandas)
+
+# Importing all of the data.
+BEGIN PROGRAM Python.
+
+dataCursor = spss.Cursor()
+AllData = dataCursor.fetchall()
+dataCursor.close()
+print AllData
+
+END PROGRAM.
+
+# Importing all of the data.
+BEGIN PROGRAM Python.
+
+hdrs = pd.DataFrame(cursor.description)
+
+
+# dataCursor = spss.Cursor()
+AllData = hdrs.fetchall()
+dataCursor.close()
+print AllData
+
+END PROGRAM.

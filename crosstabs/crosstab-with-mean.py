@@ -59,3 +59,12 @@ data_top = data.head()
 # display
 data_top
 END PROGRAM.
+
+
+# Importing all of the data.
+BEGIN PROGRAM Python.
+dataCursor = spss.Cursor()
+AllData = dataCursor.fetchall()
+dataCursor.close()
+print AllData
+END PROGRAM.
